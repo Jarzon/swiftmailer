@@ -23,6 +23,7 @@ class Swift_SwiftException extends Exception
      */
     public function __construct($message, $code = 0, Exception $previous = null)
     {
+        if($code === null) $code = 0;
         parent::__construct($message, $code, $previous);
     }
 }
